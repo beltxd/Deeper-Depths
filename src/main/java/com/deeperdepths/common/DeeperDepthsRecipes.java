@@ -34,7 +34,6 @@ public class DeeperDepthsRecipes {
     public static void registerRecipes(RegistryEvent<IRecipe> event) {
         registerOreDictionary();
         registerFurnaceRecipes();
-        registerCraftingRecipes();
         registerBrewingRecipes();
         if (Loader.isModLoaded("mekanism")) MekanismIntegration.registerRecipes();
         if (Loader.isModLoaded("chisel")) ChiselIntegration.registerRecipes();
@@ -68,7 +67,7 @@ public class DeeperDepthsRecipes {
     }
     
     //this should be done with jsons probably, but I'm lazy, I may switch them over to be json files eventually
-    private static void registerCraftingRecipes() {
+    public static void registerRecipes(RegistryEvent<IRecipe> event) {
         //tuff
         GameRegistry.addShapedRecipe(Constants.loc("polished_tuff"), Constants.loc("tuff"),
                 new ItemStack(DeeperDepthsBlocks.STONE, 4, 1), "MM", "MM", 'M',
