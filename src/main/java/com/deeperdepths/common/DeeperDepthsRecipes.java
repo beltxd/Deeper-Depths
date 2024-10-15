@@ -67,7 +67,7 @@ public class DeeperDepthsRecipes {
     }
     
     //this should be done with jsons probably, but I'm lazy, I may switch them over to be json files eventually
-    public static void registerRecipes(RegistryEvent<IRecipe> event) {
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         //tuff
         GameRegistry.addShapedRecipe(Constants.loc("polished_tuff"), Constants.loc("tuff"),
                 new ItemStack(DeeperDepthsBlocks.STONE, 4, 1), "MM", "MM", 'M',
